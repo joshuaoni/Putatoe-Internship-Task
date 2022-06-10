@@ -1,38 +1,457 @@
 .App {
   text-align: center;
+  background: #f3f9f9;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav {
+  background: #419ea6;
+  justify-content: center;
+  padding: 1vh 5vw 0.5vh 5vw;
+  position: sticky;
+  z-index: 1;
+  top: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.plb {
+  padding: 2vh 5vw 0.5vh 5vw;
+  background: #419ea6;
+  justify-content: space-between;
+  display: flex;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.location h3 {
+  color: white;
+  margin: 0;
+  padding: 5px 0;
+}
+
+.location {
+  border: solid 1px white;
+  border-radius: 10px;
+  margin: 0 0 0 0.5rem;
+  width: 35vw;
+}
+
+.bell {
+  margin-right: 0.8rem;
+}
+
+.pin {
+  margin-right: 0.5rem;
+  align-items: center;
+}
+
+.search input {
+  border: 0px solid rgba(0,0,0,0);
+  border-radius: 7px;
+  margin-right: 16px;
+  padding: 0.8rem 10rem;
+}
+
+.s-v {
+  margin: 8px;
+  justify-content: center;
+  align-items: center;
+}
+
+.mic {
+  height: 32px;
+  display: flex;
+  align-items: center;
+}
+
+.cover {
+  background: white;
+  margin: 1vh 1.5vw 0 1.5vw;
+}
+
+.menu {
+  margin: 20px 7vw 15px 7vw;
+}
+
+.img {
+  background: white;
+  height: 26vw;
+  width: 20.75vw;
+  margin: 0.5vw;
+  border-radius: 20px; 
+  cursor: pointer;
+}
+
+.imgl {
+  background: white;
+  height: 26vw;
+  margin: 0.5vw 0.5vw 0.5vw 0;
+  width: 20.75vw;
+  border-radius: 20px; 
+  cursor: pointer;
+}
+
+.imgr {
+  background: white;
+  height: 26vw;
+  margin: 0.5vw 0 0.5vw 0.5vw;
+  width: 20.75vw;
+  border-radius: 20px; 
+  cursor: pointer;
+}
+
+.img-cont {
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service .cont {
+  background: white;
+}
+
+.service p {
+  background: #dbedef;
+  margin: 2rem 0;
+  font-size: 1.7rem;
+  font-weight: 700;
+  padding: 0.5rem 0;
+  color: #027e8b;
+}
+
+.service p:first-child {
+  background: #dbedef;
+  margin: 0rem 0 2rem 0;
+  font-size: 1.7rem;
+  font-weight: 700;
+  padding: 0.5rem 0;
+  color: #027e8b;
+}
+
+.service {
+  margin: 2.5vw;
+}
+
+.options {
+  background-color: white;
+  width: 18.4vw;
+  margin: 2vh 1vw 1vh 1vw;
+}
+
+.options:first-child {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+.footer {
+  display: flex;
+  position: sticky;
+  z-index: 1;
+  bottom: 0;
+  background: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.h-icon {
+  color: #027e8b;
+}
+
+
+.s-icon {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 9.5px;
+  margin-right: -32px;
+  position: relative;
+  z-index: 1;
+  color: #419ea6;
+}
+
+.fa-lg {
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.fa-2x {
+  font-size: 1.7em;
+  cursor: pointer;
+}
+
+.fa-3x {
+  font-size: 2.5em;
+  cursor: pointer;
+}
+
+.menu h2  {
+  margin: 0 15px;
+  color: #027e8b;
+  font-size: 170%;
+  font-weight: 500;
+}
+
+.footer h3 {
+  margin: 0 15px;
+  color: #027e8b;
+  font-size: 140%;
+  font-weight: 500;
+}
+
+.footer img {
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cover img {
+  vertical-align: middle;
+  width: 100vw;
+}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+@media screen and (max-width: 63.5em) {
+  .menu h2  {
+    padding: 0 2px;
+    font-size: 140%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .menu img {
+    height: 80px;
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 49em) {
+  .footer h3 {
+    margin: 0 15px;
+    font-size: 100%;
+  }
+  
+  .footer img {
+    height: 35px;
+  }
+
+  .footer .home {
+    height: 55px;
+  }
+
+  .fa-3x {
+    font-size: 1.8em;
+  }
+
+  .options {
+    width: 18.4vw;
+    margin: 1vh 1vw;
+  }
+}
+
+@media screen and (max-width: 45.5em) {
+  .search input {
+    margin: 0 16px 0 10px;
+    padding: 0.7rem 1rem 0.7rem 4rem;
+  }
+
+  .s-icon {
+    margin-right: -36px;
+  }
+  
+  .fa-lg {
+    font-size: 1.24em;
+    cursor: pointer;
+  }
+
+  .nav {
+    padding: 1vh 5vw 0.5vh 5vw;
+  }
+
+  .fa-4x {
+    font-size: 1.8em;
+  }
+
+  .fa-2x {
+    font-size: 1.5em;
+  }
+  
+  .plb {
+    padding: 2vh 3.5vw 0.5vh 3.5vw;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .location h3 {
+    font-size: 0.95em;
+  }
+  
+  .location {
+    margin: 0 2vw 0 1vw;
+    width: 60vw;
+  }
+
+  .dot {
+    height: 10px;
+    width: 10px;
+  }
+
+  .menu {
+    margin: 28px 1.5vw 15px 1.5vw;
+  }
+
+  .img {
+    height: 30vw;
+    width: 23.5vw;
+    margin: 0.5vw;
+    padding-top: 10px;
+  }
+  
+  .imgl {
+    height: 30vw;
+    margin: 0.5vw 0.5vw 0.5vw 0;
+    width: 23.5vw;
+    padding-top: 10px;
+  }
+  
+  .imgr {
+    height: 30vw;
+    margin: 0.5vw 0 0.5vw 0.5vw;
+    width: 23.5vw;
+    padding-top: 10px;
+  }
+
+  .menu h2  {
+    margin: 0px;
+    font-size: 115%;
+  }
+
+  .menu img {
+    height: 65px;
+    width: auto;
+  }
+  
+  .service p {
+    margin: 1.5rem 0;
+    font-size: 1.3rem;
+    padding: 0.5rem 0;
+  }
+
+  .service p:first-child {
+    margin: 0rem 0 2rem 0;
+    font-size: 1.3rem;
+    padding: 0.5rem 0;
+  }
+}
+
+@media screen and (max-width: 38.5em) {
+  .footer h3 {
+    margin: 0px;
+    font-size: 75%;
+  }
+  
+  .footer img {
+    height: 28px;
+  }
+
+  .footer .home {
+    height: 47px;
+  }
+
+  .fa-3x {
+    font-size: 1.44em;
+  }
+
+  .options {
+    width: 18.4vw;
+    margin: 1vh 1vw 0 1vw;
+  }
+
+  .options:first-child {
+    margin: 1vh 1vw;
+  }
+}
+
+@media screen and (max-width: 36.4em) {
+  .menu h2  {
+    padding: 0 2px;
+    font-size: 100%;
+  }
+
+  .menu img {
+    height: 50px;
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 26em) {
+  .menu h2  {
+    padding: 0 2px;
+    font-size: 90%;
+  }
+
+  .menu img {
+    height: 45px;
+    width: auto;
+  }
+
+  .img {
+    height: 32vw;
+    border-radius: 10px; 
+  }
+  
+  .imgl {
+    height: 32vw;
+    border-radius: 10px; 
+  }
+  
+  .imgr {
+    height: 32vw;
+    border-radius: 10px; 
   }
 }
